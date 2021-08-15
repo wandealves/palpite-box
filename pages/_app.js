@@ -1,14 +1,18 @@
-import 'tailwindcss/tailwind.css'
+import "tailwindcss/tailwind.css";
 
-import '../styles/globals.css';
+import Header from "../components/Header";
 
-const MyApp = ({Component, pageProps}) =>{
-return (
-  <div>
-      <h1 className="bg-green-400 md:bg-red-900 p-8">My App</h1>
-       <Component {...pageProps}></Component>
-  </div>
-);
-}
+import "../styles/globals.css";
+
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <div>
+      <Header />
+      <div className="container mx-auto">
+        <Component {...pageProps} />
+      </div>
+    </div>
+  );
+};
 
 export default MyApp;
